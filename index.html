@@ -1,125 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navigation Sidebar</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="app-shell">
-      <aside class="sidebar">
-        <div>
-          <p class="eyebrow">Operations Hub</p>
-          <h2>Navigation</h2>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oyera Service Bay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+    <aside style="background-color: rgb(98, 100, 100);" class="sidebar">
+      <div>
+        <p class="eyebrow">Registration pages</p>
+        <h2>Welcome to Oyera Service Bay</h2>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#customer"><button style="background-color: burlywood;" class="  nav-btn active"
+            data-page="customer-registration">Customer Registration</button></a>
+        <a href="#technician"><button style="background-color: burlywood; " class="nav-btn"
+            data-page="technician-registration">Technician Registration</button></a>
+        <a href="#customer-display"><button style="background-color: burlywood;" class="nav-btn"
+            data-page="customer-display">Customer Display / View</button></a>
+      </nav>
+
+      <div class="sidebar-card">
+        <h3>Quick note</h3>
+        <p>Select any item to switch between the three pages in the main workspace.</p>
+      </div>
+    </aside>
+
+    <main class=" content-area">
+      <section style="background-image: url('images/Garage\ .jpg'); class=" page active" id="customer-registration">
+        <p class="eyebrow">Page 1</p>
+        <h1 id="customer">Customer Registration</h1>
+        <p class="lead">Create and manage customer profiles with a simple registration form.</p>
+
+        <form class="card-grid">
+          <label>
+            Full Name
+            <input type="text" placeholder="Emma omara" />
+          </label>
+          <label>
+            Phone Number
+            <input type="tel" placeholder="+256752097750" />
+          </label>
+          <label>
+            Email Address
+            <input type="email" placeholder="omaraemma18@example.com" />
+          </label>
+          <label>
+            Address
+            <input type="text" placeholder="kampala Makindye Nsambya" />
+          </label>
+          <label class="full-width">
+            Notes
+            <textarea rows="4" placeholder="Add any special customer details here"></textarea>
+          </label>
+          <button class="primary-btn full-width" type="button">Save Customer</button>
+          <a href="#"><button class="primary-btn full-width" type="button">Go back to top</button></a>
+        </form>
+      </section>
+
+      <section style="background-image:url(images/Garage.jpg)" class="page" id="technician-registration">
+        <p class="eyebrow">Page 2</p>
+        <h1 id="technician">Technician Registration</h1>
+        <p class="lead">Register technicians and assign their service details.</p>
+
+        <form class="card-grid">
+          <label>
+            Technician Name
+            <input type="text" placeholder="Emma Omara" />
+          </label>
+          <label>
+            Skill Area
+            <input type="text" placeholder="Electrical / Engine/Paint/Wheel Alignment" />
+          </label>
+          <label>
+            Technician ID
+            <input type="text" placeholder="TECH-1024" />
+          </label>
+          <label>
+            Contact Number
+            <input type="tel" placeholder="+25675209770" />
+          </label>
+          <label class="full-width">
+            Availability
+            <textarea rows="4" placeholder="Mon–Fri, 8 AM to 5 PM"></textarea>
+          </label>
+          <button class="primary-btn full-width" type="button">Register Technician</button>
+          <a href="#"><button class="primary-btn full-width" type="button">Go back to top</button></a>
+        </form>
+      </section>
+
+      <section style="background-color: rgb(24, 197, 122);" class="page" id="customer-display">
+        <p class="eyebrow">Page 3</p>
+        <h1 id="customer-display">Customer Display / View</h1>
+        <p class="lead">Review customer records in a clean display panel.</p>
+
+        <div style="background-color: rgb(167, 124, 202);" class="display-card">
+          <div class="display-row"><strong>Customer:</strong> Emma Omara</div>
+          <div class="display-row"><strong>Phone:</strong> +256752097750</div>
+          <div class="display-row"><strong>Email:</strong> omaraemma18@example.com</div>
+          <div class="display-row"><strong>Status:</strong> Pending</div>
+          <div class="display-row"><strong>Issue:</strong> wheel alignment</div>
         </div>
 
-        <nav class="nav-links">
-          <button class="nav-btn active" data-page="customer-registration">Customer Registration</button>
-          <button class="nav-btn" data-page="technician-registration">Technician Registration</button>
-          <button class="nav-btn" data-page="customer-display">Customer Display / View</button>
-        </nav>
-
-        <div class="sidebar-card">
-          <h3>Quick note</h3>
-          <p>Select any item to switch between the three pages in the main workspace.</p>
+        <div class="mini-grid">
+          <article style="background-color: rgb(151, 75, 147);" class="mini-card">
+            <h3>Service Details</h3>
+            <p>wheel inequality.</p>
+          </article>
+          <article style="background-color: rgb(151, 75, 147);" class="mini-card">
+            <h3> Technician Notes</h3>
+            <p>Shock absorber needs replacement <br>wheel imbalance <br>etc.</p>
+          </article>
         </div>
-      </aside>
+        
 
-      <main class="content-area">
-        <section class="page active" id="customer-registration">
-          <p class="eyebrow">Page 1</p>
-          <h1>Customer Registration</h1>
-          <p class="lead">Create and manage customer profiles with a simple registration form.</p>
+      </section>
+      <a href="#"><button class="primary-btn full-width" type="button">Go back to top</button></a>
+    </main>
+  </div>
 
-          <form class="card-grid">
-            <label>
-              Full Name
-              <input type="text" placeholder="John Doe" />
-            </label>
-            <label>
-              Phone Number
-              <input type="tel" placeholder="+1 555 123 4567" />
-            </label>
-            <label>
-              Email Address
-              <input type="email" placeholder="john@example.com" />
-            </label>
-            <label>
-              Address
-              <input type="text" placeholder="123 Main Street" />
-            </label>
-            <label class="full-width">
-              Notes
-              <textarea rows="4" placeholder="Add any special customer details here"></textarea>
-            </label>
-            <button class="primary-btn full-width" type="button">Save Customer</button>
-          </form>
-        </section>
+  <script src="script.js"></script>
+</body>
 
-        <section class="page" id="technician-registration">
-          <p class="eyebrow">Page 2</p>
-          <h1>Technician Registration</h1>
-          <p class="lead">Register technicians and assign their service details.</p>
-
-          <form class="card-grid">
-            <label>
-              Technician Name
-              <input type="text" placeholder="Alex Morgan" />
-            </label>
-            <label>
-              Skill Area
-              <input type="text" placeholder="Electrical / HVAC" />
-            </label>
-            <label>
-              Certification ID
-              <input type="text" placeholder="TECH-1024" />
-            </label>
-            <label>
-              Contact Number
-              <input type="tel" placeholder="+1 555 765 4321" />
-            </label>
-            <label class="full-width">
-              Availability
-              <textarea rows="4" placeholder="Mon–Fri, 8 AM to 5 PM"></textarea>
-            </label>
-            <button class="primary-btn full-width" type="button">Register Technician</button>
-          </form>
-        </section>
-
-        <section class="page" id="customer-display">
-          <p class="eyebrow">Page 3</p>
-          <h1>Customer Display / View</h1>
-          <p class="lead">Review customer records in a clean display panel.</p>
-
-          <div class="display-card">
-            <div class="display-row"><strong>Customer:</strong> Sarah Williams</div>
-            <div class="display-row"><strong>Phone:</strong> +1 555 222 1144</div>
-            <div class="display-row"><strong>Email:</strong> sarah@example.com</div>
-            <div class="display-row"><strong>Status:</strong> Active</div>
-            <div class="display-row"><strong>Last Visit:</strong> 2026-06-10</div>
-          </div>
-
-          <div class="mini-grid">
-            <article class="mini-card">
-              <h3>Service History</h3>
-              <p>3 completed visits in the last 6 months.</p>
-            </article>
-            <article class="mini-card">
-              <h3>Notes</h3>
-              <p>Prefers evening service and text updates.</p>
-            </article>
-          </div>
-        </section>
-      </main>
-    </div>
-
-    <script src="script.js"></script>
-  </body>
 </html>

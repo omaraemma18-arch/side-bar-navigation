@@ -1,13 +1,16 @@
 :root {
   color-scheme: light;
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #07111f 0%, #10263b 45%, #1f3b5a 100%);
-  color: #eaf2ff;
+  font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+  background-image: url(imag/Garage\ .jpg);
+  color: #000000;
+  
+
 }
 
 * { box-sizing: border-box; }
-body { margin: 0; min-height: 100vh; }
-
+body { margin: 0; min-height: 100vh; 
+  
+}
 .app-shell {
   display: flex;
   min-height: 100vh;
@@ -46,9 +49,12 @@ body { margin: 0; min-height: 100vh; }
 }
 
 .sidebar-card { padding: 14px; font-size: 0.95rem; color: #dbe7ff; }
-.content-area { flex: 1; padding: 28px; }
+.content-area { flex: 1; padding: 28px;
+/*background:#7c777c;*/
+/*background-image: url(images/Garage\ .jpg);*/}
 .page { display: none; padding: 24px; }
-.page.active { display: block; }
+.page.active { display: block;
+background-image: url(images/Garage\ .jpg); }
 .lead { color: #dbe7ff; max-width: 700px; }
 .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 18px; }
 label { display: grid; gap: 6px; font-weight: 600; color: #eff6ff; }
@@ -59,7 +65,8 @@ input, textarea {
 .primary-btn {
   border: none; border-radius: 12px; background: linear-gradient(135deg, #4fc3ff, #2f79ff); color: #03111d; padding: 12px 14px; font-weight: 700; cursor: pointer;
 }
-.display-card { padding: 16px; display: grid; gap: 8px; margin-top: 18px; }
+.display-card { padding: 16px; display: grid; gap: 8px; margin-top: 18px; 
+background-color:darkgreen}
 .mini-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 14px; }
 .mini-card { padding: 14px; color: #eaf2ff; }
 
